@@ -3,20 +3,29 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Etch A Sketch</title>
+        <title>Odin Etch A Sketch</title>
         <script src="script.js" defer></script>
         <link href="style.css" rel="stylesheet">
+        <link href="favicon.ico" rel="icon">
     </head>
     <body>
-        <h1>Etch A Sketch</h1>
-        <div id="settings">
-            <button id="size" value="16">Set grid dimension!</button>
-            <button id="clear">Clear grid!</button>
-            <button id="rainbow">Rainbow color!</button>
-            <button id="black">Black color!</button>
-        </div>
-        <div id="container">
+        <div id="device">
+            <h1 id="heading">Etch A Sketch</h1>
+            <div id="container">
 
+            </div>
+            <div id="settings">
+                <div id="dimension">
+                    <span>Grid Size: </span>
+                    <button id="size" value="16">Set grid dimension</button>
+                </div>
+                <div id="color">
+                    <span>Color: </span>
+                    <button id="rainbow">Rainbow</button>
+                    <button id="black">Black</button>
+                </div>
+            </div>
+            <button id="clear">Erase</button>
         </div>
     </body>
 </html>

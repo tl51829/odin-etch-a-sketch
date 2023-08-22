@@ -25,7 +25,7 @@ createGrid(currentSize);
 let boxes = document.querySelectorAll('.box');
 boxes.forEach((box) => {
     box.addEventListener('mouseover', (e) => {
-        box.style.backgroundColor = "#333333";
+        box.style.backgroundColor = "#777777";
     });
 });
 
@@ -53,7 +53,12 @@ sizeSetting.addEventListener('click', (e) => {
     boxes = document.querySelectorAll('.box');
     boxes.forEach((box) => {
         box.addEventListener('mouseover', (e) => {
-            box.style.backgroundColor = '#333333';
+            let active = document.querySelector(".active");
+            if (active.textContent === "Rainbow color!") {
+                box.style.backgroundColor = `rgb(${getRandomNumber()}, ${getRandomNumber()}, ${getRandomNumber()})`;
+            } else {
+                box.style.backgroundColor = '#777777';
+            }
         });
     });
 });
@@ -63,7 +68,7 @@ const clear = document.getElementById('clear');
 
 clear.addEventListener('click', (e) => {
     boxes.forEach((box) => {
-        box.style.backgroundColor = 'white';
+        box.style.backgroundColor = "#dddddd";
     });
 });
 
@@ -71,10 +76,12 @@ clear.addEventListener('click', (e) => {
 const black = document.getElementById('black');
 const rainbow = document.getElementById('rainbow');
 
+black.classList.add('active');
+
 black.addEventListener('click', (e) => {
     boxes.forEach((box) => {
         box.addEventListener('mouseover', (e) => {
-            box.style.backgroundColor = '#333333';
+            box.style.backgroundColor = '#777777';
         });
     });
     
